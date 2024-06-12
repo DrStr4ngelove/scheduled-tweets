@@ -1,24 +1,18 @@
-# README
+# SCHEDULE TWEETS README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Ruby version
+  ruby 3.3.2 (2024-05-30 revision e5a195edf6) [x86_64-darwin21]
 
-Things you may want to cover:
+- System dependencies
 
-* Ruby version
+- Configuration
 
-* System dependencies
+- Database creation
 
-* Configuration
+- Database initialization
 
-* Database creation
+- How to run the test suite
 
-* Database initialization
+- Services (job queues, cache servers, search engines, etc.)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Deployment instructions
