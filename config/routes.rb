@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   # root route
   get "/", to: "main#index"
 
+  # sign up routes
+  get "sign_up", to: "registrations#new"
+  post "sign_up", to: "registrations#create"
+
 end
