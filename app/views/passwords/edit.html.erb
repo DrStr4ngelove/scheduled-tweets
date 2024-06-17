@@ -1,10 +1,10 @@
-<h1>Sign Up!</h1>
+<h1>Edit Password</h1>
 
 <!-- form_with needs route users -->
-<%= form_with model: @user, url: sign_up_path do |form| %>
+<%= form_with model: Current.user, url: edit_password_path do |form| %>
     <% if form.object.errors.any? %>
         <div id="error_explanation" class="alert alert-danger">
-            <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+            <h2><%= pluralize(Current.user.errors.count, "error") %> prohibited this user from being saved:</h2>
             <ul>
                 <% form.object.errors.full_messages.each do |message| %>
                     <li><%= message %></li>
@@ -12,11 +12,6 @@
             </ul>
         </div>
     <% end %>
-
-    <div class="mb-3">
-        <%= form.label :email %>
-        <%= form.email_field :email, class: "form-control", placeholder: 'TestyMcTestface@email.com'%>
-    </div>
     
     <div class="mb-3">
         <%= form.label :password %>
@@ -29,7 +24,7 @@
     </div>
     
     <div class="mb-3">
-        <%= form.submit "Sign Up", class: "btn btn-primary" %>
+        <%= form.submit "Update Password", class: "btn btn-primary" %>
     </div>
 
 <% end %>
