@@ -1,4 +1,4 @@
-# SCHEDULE TWEETS README
+# SCHEDULE TWEETS
 
 - Ruby version
   ruby 3.3.2 (2024-05-30 revision e5a195edf6) [x86_64-darwin21]
