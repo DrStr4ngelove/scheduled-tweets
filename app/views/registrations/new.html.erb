@@ -2,11 +2,17 @@
 
 <!-- form_with needs route users -->
 <%= form_with model: @user, url: sign_up_path do |form| %>
-    <%
-=begin%>
- <%= render 'shared/error_messages', object: form.object %> 
-<%
-=end%>
+    <% if @user.errors.any? %>
+        <div id="error_explanation" class="alert alert-danger">
+            <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+            <ul>
+                <% @user.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
     <div class="mb-3">
         <%= form.label :email %>
         <%= form.email_field :email, class: "form-control", placeholder: 'TestyMcTestface@email.com'%>
