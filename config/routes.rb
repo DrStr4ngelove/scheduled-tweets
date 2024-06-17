@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   # password reset
   get "password/reset", to: "password_resets#new"
   post "password/reset", to: "password_resets#create"
+  get "password/reset/edit", to: "password_resets#new"
+  patch "password/reset/edit", to: "password_resets#update"
+  
 
   # log out
   delete "logout", to: "sessions#destroy"
