@@ -13,6 +13,12 @@ class RegistrationsController < ApplicationController
     # create a new user with the params from the form submit (user_params)
     @user = User.new(user_params)
     if @user.save
+      # DON'T DO THIS! 
+      # cookies[:user_id] 
+
+      # DO USE SESSION COOKIES!
+      session[:user_id] = @user.id
+
       # redirect to home page
       redirect_to root_path, notice: "Successfully signed up!"
     else

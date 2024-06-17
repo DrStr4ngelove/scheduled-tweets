@@ -1,5 +1,7 @@
 class MainController < ApplicationController
   def index
-    # @posts = Post.all
+    if session[:user_id]
+      @user = User.find_by(id: session[:user_id])
+    end
   end
 end
