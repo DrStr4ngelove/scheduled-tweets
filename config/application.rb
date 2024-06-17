@@ -17,7 +17,7 @@ module ScheduledTweets
     config.autoload_lib(ignore: %w[assets tasks])
 
     # Configuration for the application, engines, and railties goes here.
-    #
+    # config.action_controller.perform_caching = false
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
